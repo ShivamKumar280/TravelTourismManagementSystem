@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.travel</groupId>
+    <artifactId>travel-tourism-management-system</artifactId>
+    <version>1.0.0</version>
+
+    <name>Travel &amp; Tourism Management System</name>
+
+    <description>
+        Travel and Tourism Management System
+        built using Java Swing, JavaFX, HTML, CSS, JavaScript,
+        MySQL and JDBC
+    </description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>26</maven.compiler.release>
+
+        <mysql.connector.version>9.0.0</mysql.connector.version>
+        <flatlaf.version>3.5.4</flatlaf.version>
+        <javafx.version>26</javafx.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- MySQL JDBC Driver -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>${mysql.connector.version}</version>
+        </dependency>
+
+        <!-- Modern Look & Feel for Java Swing -->
+        <dependency>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf</artifactId>
+            <version>${flatlaf.version}</version>
+        </dependency>
+
+        <!-- JavaFX Swing integration: JFXPanel -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+
+        <!-- JavaFX WebView: HTML, CSS and JavaScript -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <!-- Java 26 Compiler -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <release>26</release>
+                </configuration>
+            </plugin>
+
+            <!-- Run the application using Maven -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <mainClass>com.travel.Main</mainClass>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Travel & Tourism</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><span class="brand-mark">✈</span><div><strong>Travel & Tourism</strong><small>Management System</small></div></div>
+    <div class="profile"><div class="avatar">♙</div><div><small>Welcome back,</small><strong id="profileName">Traveler</strong><span id="profileRole">Guest</span></div></div>
+    <nav id="navLinks"></nav>
+    <div class="side-bottom"><button class="nav-item" onclick="route('logout')">↪ <span>Logout</span></button><button class="nav-item exit" onclick="route('exit')">⏻ <span>Exit App</span></button></div>
+  </aside>
+  <main class="main-area" id="mainArea">
+    <header class="topbar"><button class="mobile-menu" onclick="toggleSidebar()">☰</button><div><p class="eyebrow">EXPLORE · PLAN · BOOK · TRAVEL</p><h1 id="pageTitle">Your next journey starts here</h1></div><div class="top-chip"><span class="status-dot"></span> Desktop secure session</div></header>
+    <section id="content" class="content"></section>
+    <footer>Made for better journeys <span>•</span> Travel & Tourism Management System</footer>
+  </main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
